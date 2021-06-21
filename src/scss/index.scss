@@ -1,6 +1,6 @@
-@import 'fonts';
 @import 'variables';
 @import 'libs/normalize';
+@import 'fonts';
 
 @import 'components/all';
 
@@ -70,7 +70,7 @@ body {
       margin-right: 10px;
       path {
         stroke: $black;
-        strokeWidth: 1.9;
+        strokewidth: 1.9;
       }
     }
   }
@@ -259,7 +259,7 @@ body {
           margin-right: 12px;
           path {
             fill: transparent;
-            strokeWidth: 2;
+            strokewidth: 2;
           }
         }
       }

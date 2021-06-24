@@ -18,8 +18,8 @@ const Header = () => {
           </div>
         </div>
         <div className="header__cart">
-          <Button href="/cart.html" className="button--cart">
-            <span>520 ₽</span>
+          <Button href="/cart.html" className="button--main header__button">
+            <span className="button__text">520 ₽</span>
             <div className="button__delimiter"></div>
             <svg
               width="18"
@@ -49,7 +49,7 @@ const Header = () => {
                 strokeLinejoin="round"
               />
             </svg>
-            <span>3</span>
+            <span className="button__text">3</span>
           </Button>
         </div>
       </div>

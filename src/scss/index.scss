@@ -5,13 +5,13 @@
 @import 'components/all';
 
 body {
-  background-color: $background;
+  background-color: $salomie;
 }
 
 .wrapper {
   width: calc(100vw - 100px);
   height: 100%;
-  background-color: #fff;
+  background-color: $white;
   margin: 50px auto;
   border-radius: 10px;
   max-width: 1400px;
@@ -69,7 +69,7 @@ body {
       height: 30px;
       margin-right: 10px;
       path {
-        stroke: $black;
+        stroke: $mine-shaft;
         strokewidth: 1.9;
       }
     }
@@ -109,7 +109,7 @@ body {
   &__item {
     display: flex;
     width: 100%;
-    border-top: 1px solid $gray-line;
+    border-top: 1px solid $alabaster;
     padding-top: 30px;
     margin-top: 30px;
 
@@ -183,14 +183,14 @@ body {
       width: 4%;
 
       .button {
-        border-color: darken($color: $gray-line, $amount: 10);
+        border-color: darken($color: $alabaster, $amount: 10);
       }
 
       svg {
         transform: rotate(45deg);
 
         path {
-          fill: darken($color: $gray-line, $amount: 15);
+          fill: darken($color: $alabaster, $amount: 15);
         }
       }
 
@@ -202,8 +202,8 @@ body {
         }
         &:hover,
         &:active {
-          border-color: darken($color: $gray-line, $amount: 80);
-          background-color: darken($color: $gray-line, $amount: 80);
+          border-color: darken($color: $alabaster, $amount: 80);
+          background-color: darken($color: $alabaster, $amount: 80);
         }
       }
     }
@@ -238,20 +238,20 @@ body {
         justify-content: center;
         width: 210px;
 
-        border-color: darken($color: $gray-line, $amount: 10);
+        border-color: darken($color: $alabaster, $amount: 10);
 
         span {
-          color: darken($color: $gray-line, $amount: 20);
+          color: darken($color: $alabaster, $amount: 20);
           font-weight: 500;
           font-weight: 600;
         }
 
         &:hover {
-          background-color: darken($color: $gray-line, $amount: 90);
-          border-color: darken($color: $gray-line, $amount: 90);
+          background-color: darken($color: $alabaster, $amount: 90);
+          border-color: darken($color: $alabaster, $amount: 90);
 
           span {
-            color: $gray-line;
+            color: $alabaster;
           }
         }
 
@@ -287,7 +287,7 @@ body {
       font-size: 18px;
       line-height: 145.4%;
       letter-spacing: 0.01em;
-      color: #777777;
+      color: $boulder;
     }
 
     icon {

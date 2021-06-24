@@ -1,44 +1,43 @@
 @import '../../scss/index';
 
-button {
-  border: none;
+.button {
+  $main-color: $orange;
+
+  padding: 10px 20px;
+  text-align: center;
+  color: $mine-shaft;
+  font-weight: 700;
+  border: 1px solid transparent;
+  background-color: transparent;
   outline: none;
   cursor: pointer;
-  color: inherit;
-  background-color: transparent;
-}
-
-.button {
-  display: inline-block;
-  background-color: $orange;
-  border-radius: 30px;
-  padding: 10px 20px;
-  min-width: 100px;
-  text-align: center;
-  cursor: pointer;
-  transition: background-color $duration ease-in-out, border-color $duration ease-in-out;
-  border: 1px solid transparent;
+  transition: all $duration ease-in-out;
   @include noselect();
 
-  &,
-  span {
-    color: #fff;
-  }
-
-  i,
-  span,
-  path,
+  &__text,
   svg {
-    transition: all $duration ease-in-out;
+    path {
+      transition: all $duration ease-in-out;
+    }
   }
 
-  &:hover {
-    background-color: darken($orange, 8%);
-  }
+  &--main {
+    border-radius: 30px;
+    background-color: $main-color;
 
-  &:active {
-    background-color: darken($orange, 12%);
-    transform: translateY(1px);
+    .button {
+      &__text {
+        color: $white;
+      }
+    }
+
+    &:hover {
+      background-color: darken($main-color, 8%);
+    }
+    &:active {
+      background-color: darken($main-color, 12%);
+      transform: translateY(1px);
+    }
   }
 
   &--circle {
@@ -52,40 +51,31 @@ button {
     border-width: 2px;
   }
 
-  &--black {
-    background-color: $black;
-
-    &:hover,
-    &:active {
-      background-color: lighten($color: $black, $amount: 10);
-    }
-  }
-
   &--outline {
-    background-color: #fff;
-    border-color: $orange;
+    background-color: $white;
+    border-color: $main-color;
     &,
     span {
-      color: $orange;
+      color: $main-color;
     }
 
     svg {
       path {
-        fill: $orange;
+        fill: $main-color;
       }
     }
 
     &:hover {
-      background-color: $orange;
+      background-color: $main-color;
 
       &,
       span {
-        color: #fff;
+        color: $white;
       }
 
       svg {
         path {
-          fill: #fff;
+          fill: $white;
         }
       }
     }
@@ -107,24 +97,11 @@ button {
     svg {
       margin-right: 2px;
     }
-
-    span {
-      font-weight: 600;
-      font-size: 16px;
-    }
-
-    &:hover {
-      i {
-        background-color: #fff;
-        color: $orange;
-      }
-    }
-
     i {
       display: inline-block;
       border-radius: 30px;
-      background-color: $orange;
-      color: #fff;
+      background-color: $main-color;
+      color: $white;
       font-weight: 600;
       width: 22px;
       height: 22px;
@@ -135,22 +112,12 @@ button {
       top: -1px;
       left: 3px;
     }
-  }
 
-  &--cart {
-    display: flex;
-    align-items: center;
-    line-height: 23px;
-    padding: 12px 25px;
-
-    svg {
-      margin-right: 8px;
-      margin-bottom: 1px;
-    }
-
-    span {
-      font-weight: 600;
-      font-size: 16px;
+    &:hover {
+      i {
+        background-color: $white;
+        color: $main-color;
+      }
     }
   }
 }

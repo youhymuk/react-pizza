@@ -1,14 +1,8 @@
 @import '../../scss/index';
 
 .header {
-  border-bottom: 1px solid $gray-line;
+  border-bottom: 1px solid $alabaster;
   padding: 40px 0;
-
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
 
   &__logo {
     display: flex;
@@ -26,7 +20,23 @@
     }
 
     p {
-      color: #7b7b7b;
+      color: $boulder;
     }
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    line-height: 23px;
+    padding: 12px 25px;
+
+    svg {
+      margin-right: 8px;
+      margin-bottom: 1px;
+    }
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }

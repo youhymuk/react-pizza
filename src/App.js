@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Header from './components/Header';
+import { Header, Filters, Button } from './components';
 
 const App = () => {
   return (
@@ -9,28 +9,7 @@ const App = () => {
       <main className="content">
         <div className="container">
           <div className="content__top">
-            <div className="categories">
-              <ul>
-                <li className="active">
-                  <button type="button">Все</button>
-                </li>
-                <li>
-                  <button type="button">Мясные</button>
-                </li>
-                <li>
-                  <button type="button">Вегетарианская</button>
-                </li>
-                <li>
-                  <button type="button">Гриль</button>
-                </li>
-                <li>
-                  <button type="button">Острые</button>
-                </li>
-                <li>
-                  <button type="button">Закрытые</button>
-                </li>
-              </ul>
-            </div>
+            <Filters />
             <div className="sort">
               <div className="sort__label">
                 <svg
@@ -50,13 +29,13 @@ const App = () => {
               <div className="sort__popup">
                 <ul>
                   <li className="active">
-                    <button>популярности</button>
+                    <Button text="популярности" />
                   </li>
                   <li>
-                    <button>цене</button>
+                    <Button text="цене" />
                   </li>
                   <li>
-                    <button>алфавиту</button>
+                    <Button text="алфавиту" />
                   </li>
                 </ul>
               </div>
@@ -74,27 +53,27 @@ const App = () => {
               <div className="pizza-block__selector">
                 <ul>
                   <li className="active">
-                    <button>тонкое</button>
+                    <Button text="тонкое" />
                   </li>
                   <li>
-                    <button>традиционное</button>
+                    <Button text="традиционное" />
                   </li>
                 </ul>
                 <ul>
                   <li className="active">
-                    <button>26 см.</button>
+                    <Button text="26 см." />
                   </li>
                   <li>
-                    <button>30 см.</button>
+                    <Button text="30 см." />
                   </li>
                   <li>
-                    <button>40 см.</button>
+                    <Button text="40 см." />
                   </li>
                 </ul>
               </div>
               <div className="pizza-block__bottom">
                 <div className="pizza-block__price">от 395 ₽</div>
-                <button className="button button--outline button--add">
+                <Button className="button--outline button--add">
                   <svg
                     width="12"
                     height="12"
@@ -106,9 +85,9 @@ const App = () => {
                       fill="white"
                     />
                   </svg>
-                  <span>Добавить</span>
+                  <span className="button__text">Добавить</span>
                   <i>2</i>
-                </button>
+                </Button>
               </div>
             </article>{' '}
             <article className="pizza-block">
@@ -121,27 +100,27 @@ const App = () => {
               <div className="pizza-block__selector">
                 <ul>
                   <li className="active">
-                    <button>тонкое</button>
+                    <Button text="тонкое" />
                   </li>
                   <li>
-                    <button>традиционное</button>
+                    <Button text="традиционное" />
                   </li>
                 </ul>
                 <ul>
                   <li className="active">
-                    <button>26 см.</button>
+                    <Button text="26 см." />
                   </li>
                   <li>
-                    <button>30 см.</button>
+                    <Button text="30 см." />
                   </li>
                   <li>
-                    <button>40 см.</button>
+                    <Button text="40 см." />
                   </li>
                 </ul>
               </div>
               <div className="pizza-block__bottom">
                 <div className="pizza-block__price">от 395 ₽</div>
-                <button className="button button--outline button--add">
+                <Button className="button button--outline button--add">
                   <svg
                     width="12"
                     height="12"
@@ -153,9 +132,9 @@ const App = () => {
                       fill="white"
                     />
                   </svg>
-                  <span>Добавить</span>
+                  <span className="button__text">Добавить</span>
                   <i>2</i>
-                </button>
+                </Button>
               </div>
             </article>{' '}
             <article className="pizza-block">
@@ -168,27 +147,27 @@ const App = () => {
               <div className="pizza-block__selector">
                 <ul>
                   <li className="active">
-                    <button>тонкое</button>
+                    <Button text="тонкое" />
                   </li>
                   <li>
-                    <button>традиционное</button>
+                    <Button text="традиционное" />
                   </li>
                 </ul>
                 <ul>
                   <li className="active">
-                    <button>26 см.</button>
+                    <Button text="26 см." />
                   </li>
                   <li>
-                    <button>30 см.</button>
+                    <Button text="30 см." />
                   </li>
                   <li>
-                    <button>40 см.</button>
+                    <Button text="40 см." />
                   </li>
                 </ul>
               </div>
               <div className="pizza-block__bottom">
                 <div className="pizza-block__price">от 395 ₽</div>
-                <button className="button button--outline button--add">
+                <Button className="button button--outline button--add">
                   <svg
                     width="12"
                     height="12"
@@ -200,9 +179,9 @@ const App = () => {
                       fill="white"
                     />
                   </svg>
-                  <span>Добавить</span>
+                  <span className="button__text">Добавить</span>
                   <i>2</i>
-                </button>
+                </Button>
               </div>
             </article>{' '}
             <article className="pizza-block">
@@ -215,27 +194,27 @@ const App = () => {
               <div className="pizza-block__selector">
                 <ul>
                   <li className="active">
-                    <button>тонкое</button>
+                    <Button text="тонкое" />
                   </li>
                   <li>
-                    <button>традиционное</button>
+                    <Button text="традиционное" />
                   </li>
                 </ul>
                 <ul>
                   <li className="active">
-                    <button>26 см.</button>
+                    <Button text="26 см." />
                   </li>
                   <li>
-                    <button>30 см.</button>
+                    <Button text="30 см." />
                   </li>
                   <li>
-                    <button>40 см.</button>
+                    <Button text="40 см." />
                   </li>
                 </ul>
               </div>
               <div className="pizza-block__bottom">
                 <div className="pizza-block__price">от 395 ₽</div>
-                <button className="button button--outline button--add">
+                <Button className="button button--outline button--add">
                   <svg
                     width="12"
                     height="12"
@@ -247,9 +226,9 @@ const App = () => {
                       fill="white"
                     />
                   </svg>
-                  <span>Добавить</span>
+                  <span className="button__text">Добавить</span>
                   <i>2</i>
-                </button>
+                </Button>
               </div>
             </article>{' '}
             <article className="pizza-block">
@@ -262,27 +241,27 @@ const App = () => {
               <div className="pizza-block__selector">
                 <ul>
                   <li className="active">
-                    <button>тонкое</button>
+                    <Button text="тонкое" />
                   </li>
                   <li>
-                    <button>традиционное</button>
+                    <Button text="традиционное" />
                   </li>
                 </ul>
                 <ul>
                   <li className="active">
-                    <button>26 см.</button>
+                    <Button text="26 см." />
                   </li>
                   <li>
-                    <button>30 см.</button>
+                    <Button text="30 см." />
                   </li>
                   <li>
-                    <button>40 см.</button>
+                    <Button text="40 см." />
                   </li>
                 </ul>
               </div>
               <div className="pizza-block__bottom">
                 <div className="pizza-block__price">от 395 ₽</div>
-                <button className="button button--outline button--add">
+                <Button className="button button--outline button--add">
                   <svg
                     width="12"
                     height="12"
@@ -294,9 +273,9 @@ const App = () => {
                       fill="white"
                     />
                   </svg>
-                  <span>Добавить</span>
+                  <span className="button__text">Добавить</span>
                   <i>2</i>
-                </button>
+                </Button>
               </div>
             </article>{' '}
             <article className="pizza-block">
@@ -309,27 +288,27 @@ const App = () => {
               <div className="pizza-block__selector">
                 <ul>
                   <li className="active">
-                    <button>тонкое</button>
+                    <Button text="тонкое" />
                   </li>
                   <li>
-                    <button>традиционное</button>
+                    <Button text="традиционное" />
                   </li>
                 </ul>
                 <ul>
                   <li className="active">
-                    <button>26 см.</button>
+                    <Button text="26 см." />
                   </li>
                   <li>
-                    <button>30 см.</button>
+                    <Button text="30 см." />
                   </li>
                   <li>
-                    <button>40 см.</button>
+                    <Button text="40 см." />
                   </li>
                 </ul>
               </div>
               <div className="pizza-block__bottom">
                 <div className="pizza-block__price">от 395 ₽</div>
-                <button className="button button--outline button--add">
+                <Button className="button button--outline button--add">
                   <svg
                     width="12"
                     height="12"
@@ -341,9 +320,9 @@ const App = () => {
                       fill="white"
                     />
                   </svg>
-                  <span>Добавить</span>
+                  <span className="button__text">Добавить</span>
                   <i>2</i>
-                </button>
+                </Button>
               </div>
             </article>{' '}
             <article className="pizza-block">
@@ -356,27 +335,27 @@ const App = () => {
               <div className="pizza-block__selector">
                 <ul>
                   <li className="active">
-                    <button>тонкое</button>
+                    <Button tetx="тонкое" />
                   </li>
                   <li>
-                    <button>традиционное</button>
+                    <Button text="традиционное" />
                   </li>
                 </ul>
                 <ul>
                   <li className="active">
-                    <button>26 см.</button>
+                    <Button text="26 см." />
                   </li>
                   <li>
-                    <button>30 см.</button>
+                    <Button text="30 см." />
                   </li>
                   <li>
-                    <button>40 см.</button>
+                    <Button text="40 см." />
                   </li>
                 </ul>
               </div>
               <div className="pizza-block__bottom">
                 <div className="pizza-block__price">от 395 ₽</div>
-                <button className="button button--outline button--add">
+                <Button className="button button--outline button--add">
                   <svg
                     width="12"
                     height="12"
@@ -388,9 +367,9 @@ const App = () => {
                       fill="white"
                     />
                   </svg>
-                  <span>Добавить</span>
+                  <span className="button__text">Добавить</span>
                   <i>2</i>
-                </button>
+                </Button>
               </div>
             </article>{' '}
             <article className="pizza-block">
@@ -403,27 +382,27 @@ const App = () => {
               <div className="pizza-block__selector">
                 <ul>
                   <li className="active">
-                    <button>тонкое</button>
+                    <Button tetx="тонкое" />
                   </li>
                   <li>
-                    <button>традиционное</button>
+                    <Button text="традиционное" />
                   </li>
                 </ul>
                 <ul>
                   <li className="active">
-                    <button>26 см.</button>
+                    <Button text="26 см." />
                   </li>
                   <li>
-                    <button>30 см.</button>
+                    <Button text="30 см." />
                   </li>
                   <li>
-                    <button>40 см.</button>
+                    <Button text="40 см." />
                   </li>
                 </ul>
               </div>
               <div className="pizza-block__bottom">
                 <div className="pizza-block__price">от 395 ₽</div>
-                <button className="button button--outline button--add">
+                <Button className="button button--outline button--add">
                   <svg
                     width="12"
                     height="12"
@@ -435,9 +414,9 @@ const App = () => {
                       fill="white"
                     />
                   </svg>
-                  <span>Добавить</span>
+                  <span className="button__text">Добавить</span>
                   <i>2</i>
-                </button>
+                </Button>
               </div>
             </article>{' '}
             <article className="pizza-block">
@@ -450,27 +429,27 @@ const App = () => {
               <div className="pizza-block__selector">
                 <ul>
                   <li className="active">
-                    <button>тонкое</button>
+                    <Button tetx="тонкое" />
                   </li>
                   <li>
-                    <button>традиционное</button>
+                    <Button text="традиционное" />
                   </li>
                 </ul>
                 <ul>
                   <li className="active">
-                    <button>26 см.</button>
+                    <Button text="26 см." />
                   </li>
                   <li>
-                    <button>30 см.</button>
+                    <Button text="30 см." />
                   </li>
                   <li>
-                    <button>40 см.</button>
+                    <Button text="40 см." />
                   </li>
                 </ul>
               </div>
               <div className="pizza-block__bottom">
                 <div className="pizza-block__price">от 395 ₽</div>
-                <button className="button button--outline button--add">
+                <Button className="button button--outline button--add">
                   <svg
                     width="12"
                     height="12"
@@ -482,9 +461,9 @@ const App = () => {
                       fill="white"
                     />
                   </svg>
-                  <span>Добавить</span>
+                  <span className="button__text">Добавить</span>
                   <i>2</i>
-                </button>
+                </Button>
               </div>
             </article>
           </div>

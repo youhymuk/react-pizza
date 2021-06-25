@@ -1,0 +1,54 @@
+@import '../../scss/index';
+
+.sorting {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &__open-button {
+    border-bottom: 1px dashed $orange;
+    padding: 0;
+    color: $orange;
+  }
+  &__icon {
+    margin-right: 8px;
+    transform: rotate(180deg);
+    &--close {
+      transform: rotate(0);
+    }
+  }
+  &__label {
+    font-size: 14px;
+  }
+  &__desc {
+    margin-right: 8px;
+    font-weight: 700;
+  }
+  &__popup {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background: $white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px 0;
+    width: 160px;
+  }
+  &__button {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align-last: left;
+    cursor: pointer;
+    &--active {
+      font-weight: bold;
+      color: $orange;
+      background-color: rgba($orange, 0.1);
+    }
+    &:hover {
+      background-color: rgba($orange, 0.05);
+    }
+  }
+}

@@ -1,9 +1,10 @@
 import React from 'react';
 import classNames from 'classnames';
+import { Link } from 'react-router-dom';
 
 import './index.scss';
 
-const Button = ({ className, text, children, outline, onClick, href, type = 'button' }) => {
+const Button = ({ className, text, children, outline, onClick, path, type = 'button' }) => {
   const content = children ? children : text;
 
   return type === 'button' ? (
@@ -13,9 +14,9 @@ const Button = ({ className, text, children, outline, onClick, href, type = 'but
       {content}
     </button>
   ) : (
-    <a className={classNames('button', className, { 'button--outline': outline })} href={href}>
+    <Link className={classNames('button', className, { 'button--outline': outline })} to={path}>
       {content}
-    </a>
+    </Link>
   );
 };
 

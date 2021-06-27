@@ -1,6 +1,6 @@
-@import '../variables';
+@import '../../scss/index';
 
-.pizza-block {
+.card {
   width: 280px;
   text-align: center;
   margin-bottom: 65px;
@@ -26,29 +26,28 @@
     border-radius: 10px;
     flex-direction: column;
     padding: 6px;
+  }
+  &__type-list {
+    display: flex;
+    flex: 1;
 
-    ul {
-      display: flex;
-      flex: 1;
-
-      &:first-of-type {
-        margin-bottom: 6px;
-      }
-
-      li {
-        padding: 8px;
-        flex: 1;
-        cursor: pointer;
-        font-weight: 600;
-        font-size: 14px;
-        @include noselect();
-        &.active {
-          background: $white;
-          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
-          border-radius: 5px;
-          cursor: auto;
-        }
-      }
+    &:first-of-type {
+      margin-bottom: 6px;
+    }
+  }
+  &__type-item {
+    flex: 1;
+  }
+  &__button {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    @include noselect();
+    &--active {
+      background: $white;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);
+      border-radius: 5px;
+      cursor: auto;
     }
   }
 

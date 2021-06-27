@@ -2,8 +2,6 @@
 @import 'libs/normalize';
 @import 'fonts';
 
-@import 'components/all';
-
 body {
   background-color: $salomie;
 }
@@ -24,7 +22,7 @@ body {
     margin: 35px 0;
   }
 
-  &__items {
+  &__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

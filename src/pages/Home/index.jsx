@@ -1,23 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import { Filters, Sorting, Card } from '../../components';
 
-const Home = () => {
-  const URL = 'http://localhost:3000/db.json';
-
-  const [items, setItems] = useState([]);
-
-  useEffect(() => {
-    fetch(URL)
-      .then((resp) => resp.json())
-      .then(({ pizzas }) => setItems(pizzas));
-  }, []);
+const Home = ({ items }) => {
+  const filtersList = ['Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые'];
+  const sortingList = ['популярности', 'цене', 'алфавиту'];
 
   return (
     <div className="container">
       <div className="content__top">
-        <Filters />
-        <Sorting />
+        <Filters filtersList={filtersList} />
+        <Sorting sortingList={sortingList} />
       </div>
       <h2 className="content__title">Все пиццы</h2>
       <ul className="content__list">
@@ -29,6 +23,14 @@ const Home = () => {
       </ul>
     </div>
   );
+};
+
+Home.propTypes = {
+  items: PropTypes.array,
+};
+
+Home.defaultProps = {
+  items: [],
 };
 
 export default Home;

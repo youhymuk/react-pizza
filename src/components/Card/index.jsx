@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import './index.scss';
@@ -86,6 +87,20 @@ const Card = ({ name, imageUrl, price, types, sizes }) => {
       </div>
     </article>
   );
+};
+
+Card.propTypes = {
+  name: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  types: PropTypes.arrayOf(PropTypes.number),
+  sizes: PropTypes.arrayOf(PropTypes.number),
+};
+
+Card.defaultProps = {
+  price: 0,
+  types: [],
+  sizes: [],
 };
 
 export default Card;

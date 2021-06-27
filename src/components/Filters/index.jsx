@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 import './index.scss';
 
 import { Button } from '../.';
 
-const Filters = () => {
-  const filtersList = ['Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые'];
-
+const Filters = ({ filtersList }) => {
   const [activeItem, setActiveItem] = useState('all');
 
   const onFilterClickHandler = (index = null) => {
@@ -43,6 +42,14 @@ const Filters = () => {
         })}
     </ul>
   );
+};
+
+Filters.propTypes = {
+  filtersList: PropTypes.array,
+};
+
+Filters.defaultProps = {
+  filtersList: [],
 };
 
 export default Filters;

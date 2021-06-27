@@ -1,13 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 import './index.scss';
 
 import { Button } from '../.';
 
-const Sorting = () => {
-  const sortingList = ['популярности', 'цене', 'алфавиту'];
-
+const Sorting = ({ sortingList }) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [activeItem, setActiveItem] = useState(0);
 
@@ -65,6 +64,14 @@ const Sorting = () => {
       )}
     </div>
   );
+};
+
+Sorting.propTypes = {
+  sortingList: PropTypes.array,
+};
+
+Sorting.defaultProps = {
+  sortingList: [],
 };
 
 export default Sorting;

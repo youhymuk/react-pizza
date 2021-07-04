@@ -30,7 +30,7 @@ body {
 
   &__top {
     display: flex;
-    align-items: center;
+    align-products: center;
     justify-content: space-between;
   }
 }
@@ -52,12 +52,12 @@ body {
   &__top {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-products: center;
   }
 
   .content__title {
     display: flex;
-    align-items: center;
+    align-products: center;
     font-size: 32px;
 
     svg {
@@ -75,7 +75,7 @@ body {
 
   &__clear {
     display: flex;
-    align-items: center;
+    align-products: center;
     cursor: pointer;
     @include noselect();
 
@@ -113,7 +113,7 @@ body {
 
     &-img {
       display: flex;
-      align-items: center;
+      align-products: center;
       margin-right: 15px;
       width: 10%;
 
@@ -144,7 +144,7 @@ body {
 
     &-count {
       display: flex;
-      align-items: center;
+      align-products: center;
       justify-content: space-between;
       width: 13%;
 
@@ -163,7 +163,7 @@ body {
 
     &-price {
       display: flex;
-      align-items: center;
+      align-products: center;
       justify-content: center;
       width: 33%;
 
@@ -176,7 +176,7 @@ body {
 
     &-remove {
       display: flex;
-      align-items: center;
+      align-products: center;
       justify-content: flex-end;
       width: 4%;
 
@@ -232,7 +232,7 @@ body {
 
       .go-back-btn {
         display: flex;
-        align-items: center;
+        align-products: center;
         justify-content: center;
         width: 210px;
 

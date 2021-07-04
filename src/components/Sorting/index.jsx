@@ -1,12 +1,14 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, memo } from 'react';
+import { useDispatch } from 'react-redux';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 import './index.scss';
 
+import { setSortBy } from '../../store/actions';
 import { Button } from '../.';
 
-const Sorting = ({ sortingList }) => {
+const Sorting = memo(function Sorting({ sortingList }) {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [activeItem, setActiveItem] = useState(0);
 
@@ -14,13 +16,20 @@ const Sorting = ({ sortingList }) => {
 
   const sortingRef = useRef();
 
-  const togglePopupHandler = () => {
+  const dispatch = useDispatch();
+
+  const onTogglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
   };
 
   const outsideClickHandler = (e) => {
     const isOutsideClick = !e.path.includes(sortingRef.current);
     if (isOutsideClick) setIsPopupOpen(false);
+  };
+
+  const onSelectSortingItem = (index) => {
+    setActiveItem(index);
+    dispatch(setSortBy(activeLabel.type));
   };
 
   useEffect(() => {
@@ -43,19 +52,19 @@ const Sorting = ({ sortingList }) => {
           />
         </svg>
         <span className="sorting__desc">Сортировка по:</span>{' '}
-        <Button className="sorting__open-button" text={activeLabel} onClick={togglePopupHandler} />
+        <Button className="sorting__open-button" text={activeLabel.name} onClick={onTogglePopup} />
       </div>
       {isPopupOpen && (
         <ul className="sorting__popup">
-          {sortingList.map((name, index) => {
+          {sortingList.map((obj, index) => {
             const isActive = activeItem === index;
 
             return (
-              <li className="sorting__item" key={`${name}_${index}`}>
+              <li className="sorting__item" key={`${obj.name}_${index}`}>
                 <Button
                   className={classNames('sorting__button', { 'sorting__button--active': isActive })}
-                  text={name}
-                  onClick={() => setActiveItem(index)}
+                  text={obj.name}
+                  onClick={() => onSelectSortingItem(index)}
                 />
               </li>
             );
@@ -64,7 +73,7 @@ const Sorting = ({ sortingList }) => {
       )}
     </div>
   );
-};
+});
 
 Sorting.propTypes = {
   sortingList: PropTypes.array,

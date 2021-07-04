@@ -79,7 +79,7 @@ const Cart = () => {
                 <span>Очистить корзину</span>
               </div>
             </div>
-            <div class="content__items">
+            <div class="content__products">
               <div class="cart__item">
                 <div class="cart__item-img">
                   <img
@@ -480,7 +480,7 @@ const Cart = () => {
               <span>Очистить корзину</span>
             </div>
           </div>
-          <div class="content__items">
+          <div class="content__products">
             <div class="cart__item">
               <div class="cart__item-img">
                 <img

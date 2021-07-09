@@ -7,14 +7,14 @@ import { Header } from './components';
 import { Home, Cart } from './pages';
 
 const App = () => {
-  const URL = 'http://localhost:3000/db.json';
+  const URL = 'http://localhost:3001/pizzas';
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     fetch(URL)
       .then((resp) => resp.json())
-      .then(({ pizzas }) => dispatch(setProducts(pizzas)));
+      .then((data) => dispatch(setProducts(data)));
   }, []);
 
   return (

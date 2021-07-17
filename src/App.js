@@ -8,10 +8,11 @@ import { Home, Cart } from './pages';
 const App = () => {
   const dispatch = useDispatch();
 
-  const { products, activeCategory, sortBy } = useSelector(({ products, filters }) => ({
+  const { products, activeCategory, sortBy, isLoading } = useSelector(({ products, filters }) => ({
     products: products.productItems,
     activeCategory: filters.category,
     sortBy: filters.sortBy,
+    isLoading: products.isLoading,
   }));
 
   useEffect(() => {
@@ -25,7 +26,7 @@ const App = () => {
         <Route
           path="/"
           component={() => (
-            <Home products={products} activeCategory={activeCategory} sortBy={sortBy} />
+            <Home products={products} activeCategory={activeCategory} sortBy={sortBy} isLoading={isLoading}/>
           )}
           exact
         />

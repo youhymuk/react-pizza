@@ -23,15 +23,23 @@ body {
   }
 
   &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 35px 65px;
+  }
+
+  &__item {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   &__top {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    .sorting {
+      margin: 12px 0 0 auto;
+    }
   }
 }
 

@@ -1,13 +1,10 @@
 @import '../../scss/index';
 
 .card {
-  width: 280px;
+  max-width: 350px;
+  min-width: 280px;
+  width: 100%;;
   text-align: center;
-  margin-bottom: 65px;
-
-  &:not(:nth-of-type(4n)) {
-    margin-right: 35px;
-  }
 
   &__image {
     width: 260px;
@@ -53,7 +50,7 @@
 
   &__bottom {
     display: flex;
-    align-products: center;
+    align-items: center;
     justify-content: space-between;
     margin-top: 20px;
   }

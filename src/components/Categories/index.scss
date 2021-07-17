@@ -2,9 +2,10 @@
 
 .categories {
   display: flex;
+  flex-wrap: wrap;
 
   &__item {
-    margin-right: 10px;
+    margin: 0 10px 10px 0;
   }
   &__button {
     background-color: #f9f9f9;

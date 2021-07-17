@@ -11,17 +11,14 @@ const Header = () => {
   return (
     <header className="header">
       <div className="container">
-        <Link to="/">
-          <div className="header__logo">
-            <img width="38" src={logo} alt="Pizza logo" />
-            <div>
-              <h1>React Pizza</h1>
-              <p>самая вкусная пицца во вселенной</p>
-            </div>
+        <Link className="header__logo" to="/">
+          <img width="38" src={logo} alt="Pizza logo" />
+          <div className="header__logo-title">
+            <h1>React Pizza</h1>
+            <p>самая вкусная пицца во вселенной</p>
           </div>
         </Link>
-        <div className="header__cart">
-          <Button className="button--main header__button" type="link" path="/cart">
+        <Button className="button--main header__button" type="link" path="/cart">
             <span className="button__text">520 ₽</span>
             <div className="button__delimiter"></div>
             <svg
@@ -54,7 +51,6 @@ const Header = () => {
             </svg>
             <span className="button__text">3</span>
           </Button>
-        </div>
       </div>
     </header>
   );

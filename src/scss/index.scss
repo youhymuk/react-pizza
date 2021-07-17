@@ -30,7 +30,7 @@ body {
 
   &__top {
     display: flex;
-    align-products: center;
+    align-items: center;
     justify-content: space-between;
   }
 }
@@ -52,12 +52,12 @@ body {
   &__top {
     display: flex;
     justify-content: space-between;
-    align-products: center;
+    align-items: center;
   }
 
   .content__title {
     display: flex;
-    align-products: center;
+    align-items: center;
     font-size: 32px;
 
     svg {
@@ -68,14 +68,14 @@ body {
       margin-right: 10px;
       path {
         stroke: $mine-shaft;
-        strokewidth: 1.9;
+        stroke-width: 1.9;
       }
     }
   }
 
   &__clear {
     display: flex;
-    align-products: center;
+    align-items: center;
     cursor: pointer;
     @include noselect();
 
@@ -113,7 +113,7 @@ body {
 
     &-img {
       display: flex;
-      align-products: center;
+      align-items: center;
       margin-right: 15px;
       width: 10%;
 
@@ -144,7 +144,7 @@ body {
 
     &-count {
       display: flex;
-      align-products: center;
+      align-items: center;
       justify-content: space-between;
       width: 13%;
 
@@ -163,7 +163,7 @@ body {
 
     &-price {
       display: flex;
-      align-products: center;
+      align-items: center;
       justify-content: center;
       width: 33%;
 
@@ -176,7 +176,7 @@ body {
 
     &-remove {
       display: flex;
-      align-products: center;
+      align-items: center;
       justify-content: flex-end;
       width: 4%;
 
@@ -232,7 +232,7 @@ body {
 
       .go-back-btn {
         display: flex;
-        align-products: center;
+        align-items: center;
         justify-content: center;
         width: 210px;
 
@@ -257,7 +257,7 @@ body {
           margin-right: 12px;
           path {
             fill: transparent;
-            strokewidth: 2;
+            stroke-width: 2;
           }
         }
       }

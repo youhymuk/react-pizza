@@ -1,4 +1,4 @@
-import React, { useState, memo } from 'react';
+import React, { memo } from 'react';
 import { useDispatch } from 'react-redux';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -8,13 +8,10 @@ import './index.scss';
 import { setActiveCategory } from '../../store/actions';
 import { Button } from '..';
 
-const Categories = memo(function Categories({ categories }) {
-  const [activeItem, setActiveItem] = useState(null);
-
+const Categories = memo(function Categories({ categories, activeCategory }) {
   const dispatch = useDispatch();
 
   const onSelectFilter = (index) => {
-    setActiveItem(index);
     dispatch(setActiveCategory(index));
   };
 
@@ -23,7 +20,7 @@ const Categories = memo(function Categories({ categories }) {
       <li className="categories__item">
         <Button
           className={classNames('categories__button', {
-            'categories__button--active': activeItem === null,
+            'categories__button--active': activeCategory === null,
           })}
           text="Все"
           onClick={() => onSelectFilter(null)}
@@ -31,7 +28,7 @@ const Categories = memo(function Categories({ categories }) {
       </li>
       {categories &&
         categories.map((name, index) => {
-          const isActive = activeItem === index;
+          const isActive = activeCategory === index;
 
           return (
             <li className="categories__item" key={`${name}_${index}`}>

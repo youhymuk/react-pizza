@@ -3,5 +3,5 @@ export const categories = ['Мясные', 'Вегетарианская', 'Гр
 export const sortingList = [
   { name: 'популярности', type: 'popular' },
   { name: 'цене', type: 'price' },
-  { name: 'алфавиту', type: 'alphabet' },
+  { name: 'названию', type: 'name' },
 ];

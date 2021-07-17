@@ -8,11 +8,10 @@ import './index.scss';
 import { setSortBy } from '../../store/actions';
 import { Button } from '../.';
 
-const Sorting = memo(function Sorting({ sortingList }) {
+const Sorting = memo(function Sorting({ sortingList, activeSortType }) {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState(0);
 
-  const activeLabel = sortingList[activeItem];
+  const activeSorting = sortingList.find((obj) => obj.type === activeSortType);
 
   const sortingRef = useRef();
 
@@ -27,9 +26,8 @@ const Sorting = memo(function Sorting({ sortingList }) {
     if (isOutsideClick) setIsPopupOpen(false);
   };
 
-  const onSelectSortingItem = (index) => {
-    setActiveItem(index);
-    dispatch(setSortBy(activeLabel.type));
+  const onSelectSortingItem = (type) => {
+    dispatch(setSortBy(type));
   };
 
   useEffect(() => {
@@ -52,19 +50,23 @@ const Sorting = memo(function Sorting({ sortingList }) {
           />
         </svg>
         <span className="sorting__desc">Сортировка по:</span>{' '}
-        <Button className="sorting__open-button" text={activeLabel.name} onClick={onTogglePopup} />
+        <Button
+          className="sorting__open-button"
+          text={activeSorting.name}
+          onClick={onTogglePopup}
+        />
       </div>
       {isPopupOpen && (
         <ul className="sorting__popup">
           {sortingList.map((obj, index) => {
-            const isActive = activeItem === index;
+            const isActive = activeSortType === sortingList[index].type;
 
             return (
               <li className="sorting__item" key={`${obj.name}_${index}`}>
                 <Button
                   className={classNames('sorting__button', { 'sorting__button--active': isActive })}
                   text={obj.name}
-                  onClick={() => onSelectSortingItem(index)}
+                  onClick={() => onSelectSortingItem(sortingList[index].type)}
                 />
               </li>
             );

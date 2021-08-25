@@ -7,3 +7,7 @@ export const ProductsTypes = {
   SET_PRODUCTS: 'SET_PRODUCTS',
   SET_LOADING: 'SET_LOADING',
 };
+
+export const CartTypes = {
+  ADD_PRODUCT_TO_CART: 'ADD_PRODUCT_TO_CART',
+};

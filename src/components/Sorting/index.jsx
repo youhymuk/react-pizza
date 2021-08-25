@@ -22,7 +22,8 @@ const Sorting = memo(function Sorting({ sortingList, activeSortType }) {
   };
 
   const outsideClickHandler = (e) => {
-    const isOutsideClick = !e.path.includes(sortingRef.current);
+    const path = e.path || (e.composedPath && e.composedPath());
+    const isOutsideClick = !path.includes(sortingRef.current);
     if (isOutsideClick) setIsPopupOpen(false);
   };
 

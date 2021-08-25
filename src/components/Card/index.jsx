@@ -7,7 +7,7 @@ import './index.scss';
 
 import { Button } from '..';
 
-const Card = ({ name, imageUrl, price, types, sizes, isLoading }) => {
+const Card = ({ id, name, imageUrl, price, types, sizes, isLoading, handleAddProductToCart, addedProductCount }) => {
   const typesList = ['тонкое', 'традиционное'];
   const sizesList = [26, 30, 40];
 
@@ -21,6 +21,18 @@ const Card = ({ name, imageUrl, price, types, sizes, isLoading }) => {
   const selectSizeHandler = (index) => {
     setActiveSize(index);
   };
+
+  const onAddProduct = () => {
+    const product = {
+      id,
+      name,
+      imageUrl,
+      price,
+      size: sizesList[activeSize],
+      type: typesList[activeType],
+    }
+    handleAddProductToCart(product)
+  }
 
   return isLoading 
     ? (
@@ -87,7 +99,7 @@ const Card = ({ name, imageUrl, price, types, sizes, isLoading }) => {
         </div>
         <div className="card__bottom">
           <div className="card__price">от {price} &#x20bd;</div>
-          <Button className="button--outline button--add">
+          <Button className="button--outline button--add" onClick={onAddProduct}>
             <svg
               width="12"
               height="12"
@@ -100,7 +112,7 @@ const Card = ({ name, imageUrl, price, types, sizes, isLoading }) => {
               />
             </svg>
             <span className="button__text">Добавить</span>
-            <i>2</i>
+            {addedProductCount && <i>{addedProductCount}</i>}
           </Button>
         </div>
       </article>
@@ -113,6 +125,8 @@ Card.propTypes = {
   price: PropTypes.number.isRequired,
   types: PropTypes.arrayOf(PropTypes.number),
   sizes: PropTypes.arrayOf(PropTypes.number),
+  addedProductCount: PropTypes.number,
+  onAddProduct: PropTypes.func.isRequired,
 };
 
 Card.defaultProps = {

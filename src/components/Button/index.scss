@@ -8,6 +8,7 @@
   color: $mine-shaft;
   font-weight: 700;
   border: 1px solid transparent;
+  border-radius: 30px;
   background-color: transparent;
   outline: none;
   cursor: pointer;
@@ -22,7 +23,6 @@
   }
 
   &--main {
-    border-radius: 30px;
     background-color: $main-color;
 
     .button {
@@ -49,6 +49,7 @@
     min-width: 32px;
     padding: 0;
     border-width: 2px;
+    border-radius: 50%;
   }
 
   &--outline {

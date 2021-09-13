@@ -10,4 +10,8 @@ export const ProductsTypes = {
 
 export const CartTypes = {
   ADD_PRODUCT_TO_CART: 'ADD_PRODUCT_TO_CART',
+  CLEAR_CART: 'CLEAR_CART',
+  REMOVE_CART_ITEM: 'REMOVE_CART_ITEM',
+  PLUS_ITEM: 'PLUS_ITEM',
+  MINUS_ITEM: 'MINUS_ITEM',
 };

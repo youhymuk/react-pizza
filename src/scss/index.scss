@@ -92,6 +92,7 @@ body {
       margin-left: 7px;
       color: #b6b6b6;
       font-size: 18px;
+      font-weight: normal;
     }
 
     span,
@@ -124,6 +125,7 @@ body {
       align-items: center;
       margin-right: 15px;
       width: 10%;
+      min-width: 80px;
 
       img {
         width: 80px;
@@ -185,12 +187,10 @@ body {
     &-remove {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+      align-self: center;
+      justify-content: center;
       width: 4%;
-
-      .button {
-        border-color: darken($color: $alabaster, $amount: 10);
-      }
+      border-color: darken($color: $alabaster, $amount: 10);
 
       svg {
         transform: rotate(45deg);
@@ -200,17 +200,15 @@ body {
         }
       }
 
-      .button {
-        svg {
-          width: 11.5px;
-          height: 11.5px;
-          position: relative;
-        }
-        &:hover,
-        &:active {
-          border-color: darken($color: $alabaster, $amount: 80);
-          background-color: darken($color: $alabaster, $amount: 80);
-        }
+      svg {
+        width: 11.5px;
+        height: 11.5px;
+        position: relative;
+      }
+      &:hover,
+      &:active {
+        border-color: darken($color: $alabaster, $amount: 80);
+        background-color: darken($color: $alabaster, $amount: 80);
       }
     }
   }

@@ -98,7 +98,7 @@ const Card = ({ id, name, imageUrl, price, types, sizes, isLoading, handleAddPro
           </ul>
         </div>
         <div className="card__bottom">
-          <div className="card__price">от {price} &#x20bd;</div>
+          <div className="card__price">от {price} &#8372;</div>
           <Button className="button--outline button--add" onClick={onAddProduct}>
             <svg
               width="12"

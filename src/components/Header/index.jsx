@@ -23,7 +23,7 @@ const Header = () => {
           </div>
         </Link>
         <Button className="button--main header__button" type="link" path="/cart">
-            <span className="button__text">{`${totalPrice} ₽`}</span>
+            <span className="button__text">{totalPrice} &#8372;</span>
             <div className="button__delimiter"></div>
             <svg
               width="18"
